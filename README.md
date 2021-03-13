@@ -14,7 +14,8 @@ Also interested in related topics:
 
 ## Status
 
-![Continuous Integration](https://github.com/mtempleheald/rustform/workflows/ci/badge.svg)
+![Continuous Integration](https://github.com/mtempleheald/rustform/workflows/continuous-integration/badge.svg)
+![Continuous Deployment](https://github.com/mtempleheald/rustform/workflows/continuous-deployment/badge.svg)
 
 ## Useful links
 

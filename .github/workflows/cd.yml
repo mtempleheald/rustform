@@ -1,4 +1,4 @@
-name: Publish to GitHub Pages
+name: continous-deployment
 
 # Always run CI, CD conditional on main branch
 on: [push, pull_request]
