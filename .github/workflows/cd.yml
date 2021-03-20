@@ -19,23 +19,18 @@ jobs:
       - name: Test Rust code
         run: cargo test
       - name: Build wasm
-        run: wasm-pack build --release --no-typescript
+        run: wasm-pack build --release --no-typescript --target web
       - name: Test wasm (Chrome)
         run: wasm-pack test --headless --chrome
       - name: Test wasm (Firefox)
         run: wasm-pack test --headless --firefox
-      - name: Install web dependencies
-        run: npm ci # Do not modify package-lock.json
-      - name: Compile website
-        run: npm run build
       # Deploy (main branch only)
-      - name: Remove build file exclusions
-        if: job.status == 'success' && github.ref == 'refs/heads/main'
-        run: sed -i -e "/docs/d" .gitignore; sed -i -e "/pkg/d" .gitignore
-        shell: bash
       - name: Deploy to GitHub Pages
         if: job.status == 'success' && github.ref == 'refs/heads/main'
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
           branch: gh-pages
           folder: .
+          clean-exclude:
+            pkg
+            index.html

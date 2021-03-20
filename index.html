@@ -7,9 +7,17 @@
   </head>
   <body>
     <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
-    <script defer src="bootstrap.js"></script>
+    <script type="module">
 
-    <h1>Enterprise without JavaScript</h1>   
-    
+      import verify from './pkg/rustform.js';
+
+      async function run() {
+        
+        await verify()
+
+      }
+      run();
+
+    </script>
   </body>
 </html>

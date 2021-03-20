@@ -22,19 +22,19 @@ Also interested in related topics:
 - [Rust WASM book](https://rustwasm.github.io/docs/book) - The official resource on Rust + Web Assembly
 - [Wasm-pack book](https://rustwasm.github.io/wasm-pack/book/) - the current/future of build of rust/wasm applications, uses npm for now
 - [Wasm Bindgen](https://rustwasm.github.io/docs/wasm-bindgen/) - wasm-bindgen reference inc WebGL examples & CI/CD
+- [Wasm Bindgen examples](https://github.com/rustwasm/wasm-bindgen/tree/master/examples)
 - [GitHub Actions context properties](https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#github-context)
 - [GitHub Actions Node example](https://stackoverflow.com/questions/58347746/automating-the-build-and-publish-process-with-github-actions-and-github-package)
 - [GitHub Actions Blazor example](https://blog.zhaytam.com/2020/06/08/deploy-blazor-wasm-github-pages-using-actions/)
 
 ## Useful commands
 
-`wasm-pack build` build wasm package
+`wasm-pack build --target web` build wasm package [without a bundler](https://rustwasm.github.io/docs/wasm-bindgen/examples/without-a-bundler.html)
 `wasm-pack test --headless --firefox` run tests in headless browser
 `wasm-pack publish` publish to npm, doubt I'll be doing this.
 
-`npm install` (one-off) grab all web dependencies from package.json
-`npm run start` run app with live reloading using webpack
-`npm run build` build app using webpack
+`cargo install https` - install the https crate into the default directory $HOME/.cargo/bin
+`http` - launch http server locally
 
 ## Dependencies
 
@@ -50,5 +50,5 @@ Also interested in related topics:
   - [Deploy to GitHub Pages](https://github.com/marketplace/actions/deploy-to-github-pages)
   - [Node setup](https://github.com/marketplace/actions/setup-node-js-environment)
   - [wasm-pack](https://rustwasm.github.io/docs/wasm-bindgen/wasm-bindgen-test/continuous-integration.html#github-actions)
-- Webpack
-  - [Copy Webpack Plugin](https://www.npmjs.com/package/copy-webpack-plugin) - include static files from source in output, e.g. html
+- Development server
+  - [Https](https://crates.io/crates/https) - run local web server with no non-rust dependencies
