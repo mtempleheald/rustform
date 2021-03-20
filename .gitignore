@@ -15,4 +15,4 @@ node_modules/
 pkg/
 wasm-pack.log
 # Required only on gh-pages branch
-docs/
+output/
