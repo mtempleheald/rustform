@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Enterprise without JavaScript</title>
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" /> <!-- Avoid missing icon errors -->    
+  </head>
+  <body>
+    <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
+    <script type="module">
+
+      import verify from './pkg/rustform.js';
+
+      async function run() {
+        
+        await verify()
+
+      }
+      run();
+
+    </script>
+  </body>
+</html>

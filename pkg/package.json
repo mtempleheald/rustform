@@ -1,0 +1,21 @@
+{
+  "name": "rustform",
+  "collaborators": [
+    "Mark Temple-Heald <mtempleheald@hotmail.com>"
+  ],
+  "description": "Investigation into an enterprise without JavaScript",
+  "version": "0.1.0",
+  "license": "MIT/Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mtempleheald/rustform"
+  },
+  "files": [
+    "rustform_bg.wasm",
+    "rustform.js",
+    "LICENSE_APACHE",
+    "LICENSE_MIT"
+  ],
+  "module": "rustform.js",
+  "sideEffects": false
+}
